@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/anglee-dashboard/precache-manifest.c3b11c669736d4453d6e582965b7a7fa.js"
+  "/anglee-dashboard/precache-manifest.d997f9964d95740772139047f8a989f7.js"
 );
 
 workbox.clientsClaim();
