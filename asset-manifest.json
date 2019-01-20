@@ -1,13 +1,15 @@
 {
-  "main.css": "/anglee-dashboard/static/css/main.ecc9f4ae.chunk.css",
-  "main.js": "/anglee-dashboard/static/js/main.4bd4c7c9.chunk.js",
-  "main.js.map": "/anglee-dashboard/static/js/main.4bd4c7c9.chunk.js.map",
-  "static/js/1.fa0c52ca.chunk.js": "/anglee-dashboard/static/js/1.fa0c52ca.chunk.js",
-  "static/js/1.fa0c52ca.chunk.js.map": "/anglee-dashboard/static/js/1.fa0c52ca.chunk.js.map",
+  "main.css": "/anglee-dashboard/static/css/main.ef8a663c.chunk.css",
+  "main.js": "/anglee-dashboard/static/js/main.3e63ee37.chunk.js",
+  "main.js.map": "/anglee-dashboard/static/js/main.3e63ee37.chunk.js.map",
+  "static/css/1.af331065.chunk.css": "/anglee-dashboard/static/css/1.af331065.chunk.css",
+  "static/js/1.e6d931d9.chunk.js": "/anglee-dashboard/static/js/1.e6d931d9.chunk.js",
+  "static/js/1.e6d931d9.chunk.js.map": "/anglee-dashboard/static/js/1.e6d931d9.chunk.js.map",
   "runtime~main.js": "/anglee-dashboard/static/js/runtime~main.11011c3f.js",
   "runtime~main.js.map": "/anglee-dashboard/static/js/runtime~main.11011c3f.js.map",
-  "static/css/main.ecc9f4ae.chunk.css.map": "/anglee-dashboard/static/css/main.ecc9f4ae.chunk.css.map",
+  "static/css/main.ef8a663c.chunk.css.map": "/anglee-dashboard/static/css/main.ef8a663c.chunk.css.map",
+  "static/css/1.af331065.chunk.css.map": "/anglee-dashboard/static/css/1.af331065.chunk.css.map",
   "index.html": "/anglee-dashboard/index.html",
-  "precache-manifest.f0379d3a3d36acd46a22d13a422b9792.js": "/anglee-dashboard/precache-manifest.f0379d3a3d36acd46a22d13a422b9792.js",
+  "precache-manifest.9abd439aa917cda623bfc85beafa3e81.js": "/anglee-dashboard/precache-manifest.9abd439aa917cda623bfc85beafa3e81.js",
   "service-worker.js": "/anglee-dashboard/service-worker.js"
 }
