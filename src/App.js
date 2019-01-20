@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
+import {BrowserRouter} from 'react-router-dom';
+import AngLeeDashBoard from './containers/AngLeeDashBoard/AngLeeDashBoard';
 
 class App extends Component {
   render() {
     return (
-      <h1>
-        Hello AngLee
-      </h1>
+      <BrowserRouter>
+        <div className='App'>
+          <AngLeeDashBoard></AngLeeDashBoard>
+        </div>
+      </BrowserRouter>
     );
   }
 }
