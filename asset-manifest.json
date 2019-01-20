@@ -1,14 +1,13 @@
 {
-  "main.css": "/anglee-dashboard/static/css/main.17518d7c.chunk.css",
-  "main.js": "/anglee-dashboard/static/js/main.b738bdc4.chunk.js",
-  "main.js.map": "/anglee-dashboard/static/js/main.b738bdc4.chunk.js.map",
-  "static/js/1.fa92c112.chunk.js": "/anglee-dashboard/static/js/1.fa92c112.chunk.js",
-  "static/js/1.fa92c112.chunk.js.map": "/anglee-dashboard/static/js/1.fa92c112.chunk.js.map",
+  "main.css": "/anglee-dashboard/static/css/main.ab26d29f.chunk.css",
+  "main.js": "/anglee-dashboard/static/js/main.cb4a802b.chunk.js",
+  "main.js.map": "/anglee-dashboard/static/js/main.cb4a802b.chunk.js.map",
+  "static/js/1.4a34e45d.chunk.js": "/anglee-dashboard/static/js/1.4a34e45d.chunk.js",
+  "static/js/1.4a34e45d.chunk.js.map": "/anglee-dashboard/static/js/1.4a34e45d.chunk.js.map",
   "runtime~main.js": "/anglee-dashboard/static/js/runtime~main.11011c3f.js",
   "runtime~main.js.map": "/anglee-dashboard/static/js/runtime~main.11011c3f.js.map",
-  "static/media/logo.svg": "/anglee-dashboard/static/media/logo.5d5d9eef.svg",
-  "static/css/main.17518d7c.chunk.css.map": "/anglee-dashboard/static/css/main.17518d7c.chunk.css.map",
+  "static/css/main.ab26d29f.chunk.css.map": "/anglee-dashboard/static/css/main.ab26d29f.chunk.css.map",
   "index.html": "/anglee-dashboard/index.html",
-  "precache-manifest.ce876401d3ad4b53ea6bd949440c04e1.js": "/anglee-dashboard/precache-manifest.ce876401d3ad4b53ea6bd949440c04e1.js",
+  "precache-manifest.af7ff79ca6b59c34a185b6c03c4fd7ee.js": "/anglee-dashboard/precache-manifest.af7ff79ca6b59c34a185b6c03c4fd7ee.js",
   "service-worker.js": "/anglee-dashboard/service-worker.js"
 }
