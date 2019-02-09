@@ -1,10 +1,10 @@
 {
   "main.css": "/anglee-dashboard/static/css/main.8559ac8f.chunk.css",
-  "main.js": "/anglee-dashboard/static/js/main.5d3feb13.chunk.js",
-  "main.js.map": "/anglee-dashboard/static/js/main.5d3feb13.chunk.js.map",
+  "main.js": "/anglee-dashboard/static/js/main.13b28ab4.chunk.js",
+  "main.js.map": "/anglee-dashboard/static/js/main.13b28ab4.chunk.js.map",
   "static/css/1.a7969cb3.chunk.css": "/anglee-dashboard/static/css/1.a7969cb3.chunk.css",
-  "static/js/1.b6b9e9db.chunk.js": "/anglee-dashboard/static/js/1.b6b9e9db.chunk.js",
-  "static/js/1.b6b9e9db.chunk.js.map": "/anglee-dashboard/static/js/1.b6b9e9db.chunk.js.map",
+  "static/js/1.73e89f42.chunk.js": "/anglee-dashboard/static/js/1.73e89f42.chunk.js",
+  "static/js/1.73e89f42.chunk.js.map": "/anglee-dashboard/static/js/1.73e89f42.chunk.js.map",
   "runtime~main.js": "/anglee-dashboard/static/js/runtime~main.11011c3f.js",
   "runtime~main.js.map": "/anglee-dashboard/static/js/runtime~main.11011c3f.js.map",
   "static/media/lifeOfPi.jpg": "/anglee-dashboard/static/media/lifeOfPi.730ad9a5.jpg",
@@ -15,6 +15,6 @@
   "static/css/main.8559ac8f.chunk.css.map": "/anglee-dashboard/static/css/main.8559ac8f.chunk.css.map",
   "static/css/1.a7969cb3.chunk.css.map": "/anglee-dashboard/static/css/1.a7969cb3.chunk.css.map",
   "index.html": "/anglee-dashboard/index.html",
-  "precache-manifest.1b8056a7a323f0b3ba24d75a0ca05c81.js": "/anglee-dashboard/precache-manifest.1b8056a7a323f0b3ba24d75a0ca05c81.js",
+  "precache-manifest.4c61de3f295b9cef7647adc4f4dd9b96.js": "/anglee-dashboard/precache-manifest.4c61de3f295b9cef7647adc4f4dd9b96.js",
   "service-worker.js": "/anglee-dashboard/service-worker.js"
 }

@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/anglee-dashboard/static/media/lifeOfPi.730ad9a5.jpg"
   },
   {
-    "revision": "5d3feb13a5148d2b8a59",
+    "revision": "13b28ab48db1d27ef279",
     "url": "/anglee-dashboard/static/css/main.8559ac8f.chunk.css"
   },
   {
@@ -12,16 +12,16 @@ self.__precacheManifest = [
     "url": "/anglee-dashboard/static/media/woodstock.76ca7815.jpg"
   },
   {
-    "revision": "b6b9e9db7d1eb38811c6",
-    "url": "/anglee-dashboard/static/js/1.b6b9e9db.chunk.js"
+    "revision": "73e89f42878457c16fcb",
+    "url": "/anglee-dashboard/static/js/1.73e89f42.chunk.js"
   },
   {
     "revision": "11011c3fddc27ff57071",
     "url": "/anglee-dashboard/static/js/runtime~main.11011c3f.js"
   },
   {
-    "revision": "5d3feb13a5148d2b8a59",
-    "url": "/anglee-dashboard/static/js/main.5d3feb13.chunk.js"
+    "revision": "13b28ab48db1d27ef279",
+    "url": "/anglee-dashboard/static/js/main.13b28ab4.chunk.js"
   },
   {
     "revision": "f665c585519eb835efe053349ef42e3c",
@@ -36,11 +36,11 @@ self.__precacheManifest = [
     "url": "/anglee-dashboard/static/media/sejie.1a15da76.jpeg"
   },
   {
-    "revision": "b6b9e9db7d1eb38811c6",
+    "revision": "73e89f42878457c16fcb",
     "url": "/anglee-dashboard/static/css/1.a7969cb3.chunk.css"
   },
   {
-    "revision": "ae3835025da8c220696ce4edaa73d1c7",
+    "revision": "db2b9b64387742ecd554acd35fd57883",
     "url": "/anglee-dashboard/index.html"
   }
 ];
