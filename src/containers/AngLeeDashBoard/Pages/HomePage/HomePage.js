@@ -7,6 +7,8 @@ import seJieImage from '../../../../assets/img/moviePoster/sejie.jpeg';
 import woodStockImage from '../../../../assets/img/moviePoster/woodstock.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faFilm } from '@fortawesome/free-solid-svg-icons';
+import { faWineGlassAlt } from '@fortawesome/free-solid-svg-icons';
 
 class HomePage extends Component {
     state = {}
@@ -38,13 +40,13 @@ class HomePage extends Component {
                 <section className='hero'>
                     <div className='background-image' style={sectionStyle}></div>
                     <div className='hero-content-area'>
-                        <h1>Welcome to AngLee Dashboard</h1>
-                        <h3>for lovely AngLee fans</h3>
+                        <h1>Welcome to Ang Lee Dashboard</h1>
+                        <h3>for lovely Ang Lee fans</h3>
                     </div>
                 </section>
 
                 <section className='destinations'>
-                    <h3 className="title">Some of our favorite AngLee movies:</h3>
+                    <h3 className="title">Some of our favorite Ang Lee movies:</h3>
                     <p>browse our top pick AngLee movies and see our statistical studies.</p>
                     <hr></hr>
                     <ul className="grid">
@@ -56,11 +58,17 @@ class HomePage extends Component {
                 </section>
 
                 <footer>
-                    <p>
-                        this site for my dear Renee</p>
-                    <ul>
-                        <FontAwesomeIcon icon={faCoffee} />
-                    </ul>
+                    <p className="m-0">
+                        this site for my dear Renee
+                    </p>
+                    <p className="m-0">
+                    Renee is the best!
+                    </p>
+                    <div>
+                        <FontAwesomeIcon icon={faCoffee} className='mx-2' />
+                        <FontAwesomeIcon icon={faFilm} className='mx-2' />
+                        <FontAwesomeIcon icon={faWineGlassAlt} className='mx-2' />
+                    </div>
                 </footer>
 
             </div>
