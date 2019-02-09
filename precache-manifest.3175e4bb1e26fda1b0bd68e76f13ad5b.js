@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/anglee-dashboard/static/media/lifeOfPi.730ad9a5.jpg"
   },
   {
-    "revision": "13b28ab48db1d27ef279",
+    "revision": "e9e205f2d401b728082c",
     "url": "/anglee-dashboard/static/css/main.8559ac8f.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = [
     "url": "/anglee-dashboard/static/js/runtime~main.11011c3f.js"
   },
   {
-    "revision": "13b28ab48db1d27ef279",
-    "url": "/anglee-dashboard/static/js/main.13b28ab4.chunk.js"
+    "revision": "e9e205f2d401b728082c",
+    "url": "/anglee-dashboard/static/js/main.e9e205f2.chunk.js"
   },
   {
     "revision": "f665c585519eb835efe053349ef42e3c",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/anglee-dashboard/static/css/1.a7969cb3.chunk.css"
   },
   {
-    "revision": "db2b9b64387742ecd554acd35fd57883",
+    "revision": "ad05b5138620d34203f75abc8d327fe8",
     "url": "/anglee-dashboard/index.html"
   }
 ];
