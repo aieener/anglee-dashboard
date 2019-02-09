@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {Route, Switch} from 'react-router-dom';
 import NavigationItems from '../../components/Navigation/NavigationItems/NavigationItems';
+import NewYorkTimesPage from './Pages/NewYorkTimes/NewYorkTimes';
+import HomePage from './Pages/HomePage/HomePage';
 
 class AngLeeDashBoard extends Component {
     render() {
@@ -13,7 +15,7 @@ class AngLeeDashBoard extends Component {
                     <Route 
                         path='/anglee-dashboard/'
                         exact
-                        component= {() => <h1 className='text-center'> Welcome to AngLeeDashBoard !</h1>}
+                        component= {HomePage}
                     ></Route>
 
                     <Route 
@@ -24,7 +26,7 @@ class AngLeeDashBoard extends Component {
                     <Route 
                         path='/anglee-dashboard/newyork'
                         exact
-                        component= {() => <h1 className='text-center'> New York</h1>}
+                        component= {NewYorkTimesPage}
                     ></Route>
                     <Route 
                         path='/anglee-dashboard/washington'
