@@ -13,7 +13,7 @@ const navigationItems = () => (
             <ul className='nav navbar-nav'>
                 <NavigationItem link="/anglee-dashboard/chicago" exact>Chicago</NavigationItem>
                 <NavigationItem link="/anglee-dashboard/newyork" exact>New York Times</NavigationItem>
-                <NavigationItem link="/anglee-dashboard/washington" exact>Washington</NavigationItem>
+                <NavigationItem link="/anglee-dashboard/dashboard" exact>Dashboard</NavigationItem>
             </ul>
         </div>
     </nav>

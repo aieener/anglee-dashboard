@@ -1,0 +1,59 @@
+/*MovieGrid Section*/
+  
+.MovieGrid{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.HeadOfGrid {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	padding: 10px 20px;
+	margin: 10px
+}
+
+.HeadOfGrid hr {
+	width: 255px;
+	height: 3px;
+	background-color: #3f51b5;
+	border: 0;
+	margin-bottom: 20px;
+}
+
+.MovieGrid li {
+	list-style: none;
+	height: 350px;
+	padding: 20px;
+	background-clip: content-box;
+	background-size: cover;
+	background-position: center;
+}
+
+.MovieGrid .Small {
+	flex-basis: 30%;
+}
+
+.MovieGrid .Large {
+	flex-basis: 70%;
+}
+
+@media (max-width: 1100px) {
+	.MovieGrid .Small,
+	.MovieGrid .Large {
+		flex-basis: 50%;
+	}
+}
+
+@media (max-width: 800px) {
+	.MovieGrid .Small,
+	.MovieGrid .Large {
+		flex-basis: 100%;
+	}
+}
+

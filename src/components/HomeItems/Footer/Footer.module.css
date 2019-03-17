@@ -1,0 +1,28 @@
+.Footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #002140;
+	color: #fff;
+	padding: 20px 0;
+}
+
+.Footer ul {
+	display: flex;
+	width: 80%;
+	justify-content: space-around;
+	margin: 0px;
+	list-style: none;
+}
+
+.Footer li {
+	text-transform: uppercase;
+	opacity: 0.6;
+}
+
+@media (max-width: 1100px) {
+	.Footer ul {
+		flex-direction: column;
+		text-align: center;
+	}
+} 
