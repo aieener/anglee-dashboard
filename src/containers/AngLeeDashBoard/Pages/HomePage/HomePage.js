@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Footer from '../../../../components/Footer/Footer';
+import Footer from '../../../../components/HomeItems/Footer/Footer';
 import MovieGrid from '../../../../components/HomeItems/MovieGrid/MovieGrid';
 import Hero from '../../../../components/HomeItems/Hero/Hero';
 
