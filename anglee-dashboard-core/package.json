@@ -9,15 +9,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aieener/anglee-dashboard-ui.git"
+    "url": "git+https://github.com/aieener/anglee-dashboard.git"
   },
   "author": "yai",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/aieener/anglee-dashboard-ui/issues"
+    "url": "https://github.com/aieener/anglee-dashboard/issues"
   },
-  "homepage": "https://github.com/aieener/anglee-dashboard-ui#readme",
+  "homepage": "https://github.com/aieener/anglee-dashboard#readme",
   "dependencies": {
-    "express": "^4.17.0"
+    "body-parser": "^1.19.0",
+    "express": "^4.17.0",
+    "mongodb": "^3.2.5",
+    "mongoose": "^5.5.9"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.0"
   }
 }

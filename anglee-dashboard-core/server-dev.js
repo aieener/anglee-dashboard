@@ -12,6 +12,7 @@ app.use(dashboardRoutes);
 
 mongoose
   .connect(
+    "mongodb_connection_url"
   )
   .then(() => {
     app.listen(port);
@@ -19,5 +20,4 @@ mongoose
   .catch(err => {
     console.log(err);
   });
-
 
