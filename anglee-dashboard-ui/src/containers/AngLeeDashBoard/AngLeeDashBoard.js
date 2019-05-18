@@ -12,6 +12,7 @@ class AngLeeDashBoard extends Component {
         <header>
           <NavigationItems></NavigationItems>
         </header>
+        <p>{this.props.data}</p>
         <Switch>
           <Route
             path='/anglee-dashboard/'

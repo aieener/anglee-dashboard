@@ -1,0 +1,23 @@
+{
+  "name": "angleeproject",
+  "version": "1.0.0",
+  "description": "anglee dashboard core layer",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aieener/anglee-dashboard-ui.git"
+  },
+  "author": "yai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aieener/anglee-dashboard-ui/issues"
+  },
+  "homepage": "https://github.com/aieener/anglee-dashboard-ui#readme",
+  "dependencies": {
+    "express": "^4.17.0"
+  }
+}
