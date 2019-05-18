@@ -23,6 +23,10 @@ class Dashboard extends Component {
         >
           <div className="logo" />
           <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
+            <Menu.Item key="1">
+              <Icon type="pie-chart" />
+              <span>Statistics</span>
+            </Menu.Item>
             <SubMenu
               key="sub1"
               title={
@@ -49,10 +53,7 @@ class Dashboard extends Component {
               <Menu.Item key="8"> Zhihu </Menu.Item>
               <Menu.Item key="9"> Rotten Tomatoes </Menu.Item>
             </SubMenu>
-            <Menu.Item key="1">
-              <Icon type="pie-chart" />
-              <span>Statistics</span>
-            </Menu.Item>
+
             <Menu.Item key="2">
               <Icon type="desktop" />
               <span>Blog</span>

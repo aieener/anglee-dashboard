@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import NavigationItems from '../../components/Navigation/NavigationItems/NavigationItems';
 import NewYorkTimesPage from './Pages/NewYorkTimes/NewYorkTimes';
 import HomePage from './Pages/HomePage/HomePage';
+import AdminPage from './Pages/Admin/Admin';
 import DashboardPage from './Pages/Dashboard/Dashboard';
 
 class AngLeeDashBoard extends Component {
@@ -12,7 +13,6 @@ class AngLeeDashBoard extends Component {
         <header>
           <NavigationItems></NavigationItems>
         </header>
-        <p>{this.props.data}</p>
         <Switch>
           <Route
             path='/anglee-dashboard/'
@@ -21,9 +21,9 @@ class AngLeeDashBoard extends Component {
           ></Route>
 
           <Route
-            path='/anglee-dashboard/chicago'
+            path='/anglee-dashboard/admin'
             exact
-            component={() => <h1 className='text-center'> Chicago</h1>}
+            component={AdminPage}
           ></Route>
           <Route
             path='/anglee-dashboard/newyork'
