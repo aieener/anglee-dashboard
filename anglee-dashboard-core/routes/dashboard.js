@@ -10,5 +10,6 @@ router.get("/test", (req, res) => {
 
 router.get('/movies', movieController.getMovies);
 router.post('/add-movie', movieController.postAddMovie);
+router.post('/delete-movie', movieController.postDeleteMovie);
 
 module.exports = router;

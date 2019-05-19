@@ -4,9 +4,6 @@ import MovieGrid from '../../../../components/HomeItems/MovieGrid/MovieGrid';
 import Hero from '../../../../components/HomeItems/Hero/Hero';
 
 class HomePage extends Component {
-  state = {}
-  componentDidMount() { }
-
   render() {
     return (
       <div>

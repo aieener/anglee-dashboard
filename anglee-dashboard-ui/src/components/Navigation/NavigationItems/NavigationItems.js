@@ -12,7 +12,6 @@ const navigationItems = () => (
         <div className='collapse navbar-collapse justify-content-end' id='navbarSupportedContent' >
             <ul className='nav navbar-nav'>
                 <NavigationItem link="/anglee-dashboard/admin" exact>Admin</NavigationItem>
-                <NavigationItem link="/anglee-dashboard/newyork" exact>New York Times</NavigationItem>
                 <NavigationItem link="/anglee-dashboard/dashboard" exact>Dashboard</NavigationItem>
             </ul>
         </div>

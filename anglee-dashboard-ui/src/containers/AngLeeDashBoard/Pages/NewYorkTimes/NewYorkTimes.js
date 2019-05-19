@@ -8,7 +8,6 @@ class NewYorkTimesPage extends Component {
     page: 1,
     error: false
   };
-
   componentDidMount() {
     var url =
       "https://newsapi.org/v2/top-headlines?" +

@@ -1,5 +1,5 @@
 import React from 'react'
-import backgroundImage from '../../../assets/img/lifeOfPi.jpg';
+import backgroundImage from '../../../assets/img/lifeOfPi-min.jpg';
 import classes from './Hero.module.css';
 
 const Hero = () => {

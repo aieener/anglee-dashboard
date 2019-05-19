@@ -6,7 +6,7 @@ const SubMenu = Menu.SubMenu;
 
 class Dashboard extends Component {
   state = {
-    collapsed: false
+    collapsed: true
   };
 
   onCollapse = collapsed => {

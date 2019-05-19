@@ -7,7 +7,7 @@ const movieSchema = new Schema({
     require: true
   },
   releaseDate: {
-    type: Number,
+    type: Date,
     require: true
   },
   cast : Map,
