@@ -22,6 +22,7 @@ class AdminPage extends Component {
   getMovies = () => {
     return axios.get("/movies").then(res => {
       const moviesBack = res.data.movies;
+      console.log(moviesBack);
       this.setState({ movies: moviesBack });
     });
   };
@@ -50,7 +51,6 @@ class AdminPage extends Component {
 
   updateKey = newKey => {
     this.setState({ selectedKeys: [newKey] });
-    console.log(this.state);
   };
 
   componentDidMount() {
