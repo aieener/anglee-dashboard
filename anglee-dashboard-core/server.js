@@ -3,7 +3,7 @@ const express = require("express");
 const port = process.env.PORT || 5000;
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-const dashboardRoutes = require('./routes/dashboard');
+const dashboardRoutes = require("./routes/dashboard");
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -13,7 +13,7 @@ app.use(dashboardRoutes);
 
 mongoose
   .connect(
-    "mongodb+srv://yai:admin@angleecluster-agq8g.mongodb.net/dashboard?retryWrites=true"
+    "mongodb://yai:admin12345@ds147746.mlab.com:47746/anglee-dashboard"
   )
   .then(() => {
     app.listen(port);
@@ -21,4 +21,3 @@ mongoose
   .catch(err => {
     console.log(err);
   });
-
