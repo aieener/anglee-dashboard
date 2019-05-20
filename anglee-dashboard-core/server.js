@@ -12,9 +12,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(dashboardRoutes);
 
 mongoose
-  .connect(
-    "mongodb://yai:admin12345@ds147746.mlab.com:47746/anglee-dashboard"
-  )
+  .connect("mongodb://yai:admin12345@ds147746.mlab.com:47746/anglee-dashboard")
   .then(() => {
     app.listen(port);
   })
