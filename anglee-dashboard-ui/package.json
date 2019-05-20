@@ -71,7 +71,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "proxy": "https://anglee-dashboard-core.herokuapp.com",
   "eslintConfig": {
     "extends": "react-app"
   },

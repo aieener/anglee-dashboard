@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import axios from "axios";
+import axios from "../../../../axios-core";
 import MovieCards from "../../../../components/Admin/MovieCards/MovieCards";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import AdminLayout from "../../../../components/Admin/AdminLayout";
