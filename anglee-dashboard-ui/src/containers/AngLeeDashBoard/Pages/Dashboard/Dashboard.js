@@ -50,8 +50,9 @@ class Dashboard extends Component {
               }
             >
               <Menu.Item key="6"> Douban </Menu.Item>
-              <Menu.Item key="8"> Zhihu </Menu.Item>
+              <Menu.Item key="8"> iMDb </Menu.Item>
               <Menu.Item key="9"> Rotten Tomatoes </Menu.Item>
+              <Menu.Item key="10"> Metacritic </Menu.Item>
             </SubMenu>
 
             <Menu.Item key="2">

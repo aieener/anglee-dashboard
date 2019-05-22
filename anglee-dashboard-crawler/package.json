@@ -1,0 +1,15 @@
+{
+  "name": "anglee-dashboard-crawler",
+  "version": "1.0.0",
+  "description": "crawler",
+  "main": "app.js",
+  "scripts": {
+    "start" : "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yai",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^1.16.0"
+  }
+}
