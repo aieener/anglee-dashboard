@@ -58,7 +58,7 @@ module.exports = class IMDbCrawlerService {
     console.log(`IMDb crawler: starting Crawling for id ${movie.title} ....`);
     const movieUrl =
       "https://www.imdb.com/title/" + movie.reviewIds.iMDbId + "/reviews?ref_=tt_urv";
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
     const page = await browser.newPage();
 
     await page.goto(movieUrl);
