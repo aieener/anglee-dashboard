@@ -18,6 +18,10 @@ const movieSchema = new Schema({
   description: {
     type: String,
     require: true
+  },
+  reviewIds: {
+    type: Map,
+    of: String
   }
 });
 

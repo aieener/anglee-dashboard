@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Form, DatePicker, Icon, Input, Button } from "antd";
-import {Redirect} from "react-router-dom";
+import { Redirect } from "react-router-dom";
 
 const { TextArea } = Input;
 class MovieForm extends React.Component {
@@ -37,6 +37,11 @@ class MovieForm extends React.Component {
         fieldName: "imageUrl",
         labelName: "Movie Poster Url",
         iconName: "link"
+      },
+      {
+        fieldName: "iMDbId",
+        labelName: "IMDb review id",
+        iconName: "barcode"
       }
     ];
   }
@@ -98,8 +103,8 @@ class MovieForm extends React.Component {
     );
 
     let redirect = null;
-    if(this.state.sumbitted) {
-      redirect = <Redirect to="/anglee-dashboard/admin/" />
+    if (this.state.sumbitted) {
+      redirect = <Redirect to="/anglee-dashboard/admin/" />;
     }
 
     return (

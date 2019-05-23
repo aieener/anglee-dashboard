@@ -25,40 +25,48 @@ module.exports = class IMDbCrawlerService {
     }
   }
 
-  async _doCrawling(page) {
+  async _doCrawling(page, movieName) {
     return await page.evaluate(
-      (sInfo, sDate, sScore, sBody) => {
+      (sInfo, sDate, sScore, sBody, name) => {
         return [...document.querySelectorAll(sInfo)].map($item => {
           const title = $item.querySelector(".title")
             ? $item.querySelector(".title").innerText
             : "N/A";
           const date = $item.querySelector(sDate).innerText;
           const score = $item.querySelector(sScore)
-            ? $item.querySelector(sScore).innerText
+            ? $item.querySelector(sScore).innerText.trim()
             : "N/A";
           const body = $item.querySelector(sBody).innerText;
-          return { title: title, date: date, score: score , body: body};
+          return {
+            movieName: name,
+            title: title,
+            date: date,
+            score: score,
+            body: body
+          };
         });
       },
       this.REVIEW_INFO_SELECTOR,
       this.REVIEW_DATE_SELECTOR,
       this.REVIEW_SCORE_SELECTOR,
-      this.REVIEW_BODY_SELECTOR
-    ); 
+      this.REVIEW_BODY_SELECTOR,
+      movieName
+    );
   }
 
-  async crawl(movieId) {
+  async crawl(movie) {
+    console.log(`IMDb crawler: starting Crawling for id ${movie.title} ....`);
     const movieUrl =
-      "https://www.imdb.com/title/" + movieId + "/reviews?ref_=tt_urv";
+      "https://www.imdb.com/title/" + movie.reviewIds.iMDbId + "/reviews?ref_=tt_urv";
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
     await page.goto(movieUrl);
     await this._clickAllLoadMore(page, await this._getTimesToClick(page));
     await page.waitFor(1000);
-    let result = await this._doCrawling(page);
-    browser.close()
-    console.log(`done Crawling task for id ${movieId}`);
+    let result = await this._doCrawling(page, movie.title);
+    browser.close();
+    console.log(`IMDb crawler: done Crawling task for id ${movie.title}`);
     return result;
   }
 };

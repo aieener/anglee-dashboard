@@ -1,4 +1,4 @@
-const Movie = require("../models/movie");
+const Movie = require("../models/Movie");
 
 exports.getMovies = (req, res, next) => {
   Movie.find()
@@ -16,12 +16,16 @@ exports.postAddMovie = (req, res, next) => {
   const imageUrl = req.body.imageUrl;
   const releaseDate = req.body.releaseDate;
   const description = req.body.description;
+  const iMDbId = req.body.iMDbId;
 
   const movie = new Movie({
     title: title,
     imageUrl: imageUrl,
     releaseDate: releaseDate,
-    description: description
+    description: description,
+    reviewIds: {
+      iMDbId : iMDbId
+    }
   });
 
   movie

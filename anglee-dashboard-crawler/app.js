@@ -1,3 +1,9 @@
-const IMDbCrawlerService = require("./crawler/IMDbcrawlerService");
+const IMDbCrawlerService = require("./IMDbCrawlerService");
 iMDbCrawlerService = new IMDbCrawlerService();
-iMDbCrawlerService.crawl('tt0454876');
+const lifeOfPi = {
+  title : 'lifeOfPi',
+  reviewIds: {
+    iMDbId: 'tt0454876'
+  }
+}
+iMDbCrawlerService.crawl(lifeOfPi);
