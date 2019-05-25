@@ -18,10 +18,9 @@ module.exports = class IMDbCrawlerService {
   }
 
   async _clickAllLoadMore(page, timesToClickLoadMore) {
-    while (timesToClickLoadMore > 0) {
+    for(let i = 0; i < timesToClickLoadMore; i++) {
       await page.click(this.LOAD_MORE_BTN_SELECTOR);
-      await page.waitFor(500);
-      timesToClickLoadMore--;
+      await page.waitFor(400);
     }
   }
 
@@ -63,7 +62,7 @@ module.exports = class IMDbCrawlerService {
 
     await page.goto(movieUrl);
     await this._clickAllLoadMore(page, await this._getTimesToClick(page));
-    await page.waitFor(1000);
+    await page.waitFor(500);
     let result = await this._doCrawling(page, movie.title);
     browser.close();
     console.log(`IMDb crawler: done Crawling task for id ${movie.title}`);
