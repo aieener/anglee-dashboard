@@ -1,21 +1,34 @@
-import React from 'react';
-import NavigationItem from './NavigationItem/NavigationItem';
-import NavigationBrand from './NavigationBrand/NavigationBrand';
+import React from "react";
+
+import { NavLink } from "react-router-dom";
+import { Layout, Menu} from "antd";
+import styled from "styled-components";
+const { Header} = Layout;
+
+const MenuItem = styled(Menu.Item)`
+  float: right;
+`;
+const StyledHeader = styled(Header)`
+  padding: 0;
+`;
 
 const navigationItems = () => (
-    <nav className='navbar navbar-expand-lg navbar-dark bg-dark' >
-        <NavigationBrand link="/anglee-dashboard" exact> Ang Lee Dashboard </NavigationBrand>
-        <button className="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className='collapse navbar-collapse justify-content-end' id='navbarSupportedContent' >
-            <ul className='nav navbar-nav'>
-                <NavigationItem link="/anglee-dashboard/admin" exact>Admin</NavigationItem>
-                <NavigationItem link="/anglee-dashboard/dashboard" exact>Dashboard</NavigationItem>
-            </ul>
-        </div>
-    </nav>
+  <StyledHeader>
+    <Menu theme="dark" mode="horizontal" style={{ lineHeight: "64px" }}>
+      <Menu.Item key="home">
+        <span>AngLee Dashboard</span>
+        <NavLink to="/" exact />
+      </Menu.Item>
+      <MenuItem key="dashboard">
+        <span>Dashboard</span>
+        <NavLink to="/dashboard" exact />
+      </MenuItem>
+      <MenuItem key="admin">
+        <span>Admin </span>
+        <NavLink to="/admin" exact />
+      </MenuItem>
+    </Menu>
+  </StyledHeader>
 );
 
 export default navigationItems;

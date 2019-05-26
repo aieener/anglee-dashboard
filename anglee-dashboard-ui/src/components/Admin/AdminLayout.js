@@ -2,14 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Layout, Menu, Icon } from "antd";
 
-const {Sider, Footer } = Layout;
+const { Sider, Footer } = Layout;
 const AdminLayout = props => {
-  const updateToAddPage = () => {
-    props.updateKey("add");
-  }
-  const updateToAdminPage = () => {
-    props.updateKey("movieCards");
-  }
   return (
     <Layout style={{ minHeight: "100vh" }}>
       <Sider
@@ -17,17 +11,26 @@ const AdminLayout = props => {
         collapsed={props.collapsed}
         onCollapse={props.onCollapse}
       >
-        <div className="logo" />
         <Menu theme="dark" selectedKeys={props.selectedKeys} mode="inline">
-          <Menu.Item key="movieCards" onClick={updateToAdminPage}>
+          <Menu.Item
+            key="movieCards"
+            onClick={() => {
+              props.updateMenuKey(["movieCards"]);
+            }}
+          >
             <Icon type="database" />
             <span>Our studies</span>
-            <Link to={props.curUrl} />
+            <Link to={props.rootUrl} />
           </Menu.Item>
-          <Menu.Item key="add" onClick={updateToAddPage}>
+          <Menu.Item
+            key="add"
+            onClick={() => {
+              props.updateMenuKey(["add"]);
+            }}
+          >
             <Icon type="plus-circle" />
             <span>Add new movie</span>
-            <Link to={props.curUrl + "/add"} />
+            <Link to={`${props.rootUrl}/add`} />
           </Menu.Item>
         </Menu>
       </Sider>

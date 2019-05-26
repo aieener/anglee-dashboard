@@ -4,26 +4,24 @@ import NavigationItems from "../../components/Navigation/NavigationItems/Navigat
 import HomePage from "./Pages/HomePage/HomePage";
 import AdminPage from "./Pages/Admin/Admin";
 import DashboardPage from "./Pages/Dashboard/Dashboard";
+import { Layout } from "antd";
+
 
 class AngLeeDashBoard extends Component {
   render() {
     return (
-      <div className="AngLeeDashBoard">
-        <header>
-          <NavigationItems />
-        </header>
+      <Layout className="layout">
+        <NavigationItems />
         <Switch>
-          <Route path="/anglee-dashboard/" exact component={HomePage} />
-
-          <Route path="/anglee-dashboard/admin" exact component={AdminPage} />
-
+          <Route path="/" exact component={HomePage} />
+          <Route path="/admin" exact component={AdminPage} />
           <Route
-            path="/anglee-dashboard/dashboard"
+            path="/dashboard"
             exact
             component={DashboardPage}
           />
         </Switch>
-      </div>
+      </Layout>
     );
   }
 }

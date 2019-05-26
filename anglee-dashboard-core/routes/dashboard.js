@@ -14,6 +14,9 @@ router.post('/add-movie', movieController.postAddMovie);
 router.post('/delete-movie', movieController.postDeleteMovie);
 
 router.get('/reviews/imdb', iMdbReviewController.getReviews);
+router.get('/reviews/imdb/:movieName', iMdbReviewController.getReviewsByMovie);
 router.post('/reviews/imdb/add-review', iMdbReviewController.postAddReviews);
+router.post('/reviews/imdb/delete-review', iMdbReviewController.postDeleteReviews);
+
 
 module.exports = router;

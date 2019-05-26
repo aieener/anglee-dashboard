@@ -108,7 +108,7 @@ class MovieForm extends React.Component {
     }
 
     return (
-      <div className="d-flex justify-content-center m-4">
+      <div style={{display : 'flex', justifyContent: 'center'}}>
         {redirect}
         <Card title="Add Movie" style={{ width: 650 }}>
           <Form {...formItemLayout} onSubmit={this.handleSubmit}>
