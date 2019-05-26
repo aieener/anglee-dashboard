@@ -114,7 +114,7 @@ class AdminPage extends Component {
     );
 
     const content = (
-      <Content style={{ margin: "10px 16px"}}>
+      <Content style={{ margin: "16px 16px"}}>
         <Route path={rootUrl} exact render={() => movieCards} />
         <Route
           path={`${rootUrl}/add`}

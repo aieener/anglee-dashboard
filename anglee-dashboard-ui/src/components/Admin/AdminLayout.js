@@ -37,7 +37,7 @@ const AdminLayout = props => {
       <Layout>
         {props.content}
         <Footer style={{ textAlign: "center" }}>
-          {"AngLee Dashboard ©2019 Created by Kurt & Renee"}
+          {"Ang Lee Dashboard ©2019 Created by Kurt & Renee"}
         </Footer>
       </Layout>
     </Layout>

@@ -3,6 +3,7 @@ module.exports = class IMDbCrawlerService {
   constructor() {
     this.REVIEW_INFO_SELECTOR = ".lister-item";
     this.REVIEW_DATE_SELECTOR = ".display-name-date .review-date";
+    this.REVIEW_USER_SELECTOR = ".display-name-date .display-name-link";
     this.REVIEW_SCORE_SELECTOR = ".rating-other-user-rating";
     this.REVIEW_BODY_SELECTOR = ".content";
     this.LOAD_MORE_BTN_SELECTOR = "#load-more-trigger";
@@ -26,12 +27,14 @@ module.exports = class IMDbCrawlerService {
 
   async _doCrawling(page, movieName) {
     return await page.evaluate(
-      (sInfo, sDate, sScore, sBody, name) => {
+      (sInfo, sDate, sScore, sBody, name,sUser) => {
         return [...document.querySelectorAll(sInfo)].map($item => {
           const title = $item.querySelector(".title")
             ? $item.querySelector(".title").innerText
             : "N/A";
           const date = $item.querySelector(sDate).innerText;
+          const user = $item.querySelector(sUser).innerText;
+          const spoiler = $item.querySelector(".spoiler-warning") ? true : false;
           const score = $item.querySelector(sScore)
             ? $item.querySelector(sScore).innerText.trim()
             : "N/A";
@@ -41,7 +44,9 @@ module.exports = class IMDbCrawlerService {
             title: title,
             date: date,
             score: score,
-            body: body
+            body: body,
+            user: user,
+            spoiler : spoiler
           };
         });
       },
@@ -49,7 +54,8 @@ module.exports = class IMDbCrawlerService {
       this.REVIEW_DATE_SELECTOR,
       this.REVIEW_SCORE_SELECTOR,
       this.REVIEW_BODY_SELECTOR,
-      movieName
+      movieName,
+      this.REVIEW_USER_SELECTOR
     );
   }
 

@@ -1,29 +1,44 @@
 import React from "react";
-import { Table } from "antd";
+import { Table, Button } from "antd";
+import { Link } from "react-router-dom";
 
-const columns = [
-  {
-    title: "MovieName",
-    dataIndex: "movieName",
-    width: "20%"
-  },
-  {
-    title: "Title",
-    dataIndex: "title",
-    width: "40%"
-  },
-  {
-    title: "Date",
-    dataIndex: "date",
-    width: "20%"
-  },
-  {
-    title: "Rate",
-    dataIndex: "score",
-    witdh: "20%"
-  }
-];
 const IMDbTableView = props => {
+  const columns = [
+    {
+      title: "MovieName",
+      dataIndex: "movieName",
+      key: "movieName",
+      width: "30%"
+    },
+    {
+      title: "Title",
+      dataIndex: "title",
+      key: "title",
+      width: "30%"
+    },
+    {
+      title: "Date",
+      dataIndex: "date",
+      key: "date",
+      width: "20%"
+    },
+    {
+      title: "Rate",
+      dataIndex: "score",
+      key: "score",
+      witdh: "10%"
+    },
+    {
+      title: "Content",
+      key: "content",
+      witdh: "10%",
+      render: movie => (
+        <Button type="primary" onClick={() => props.handleReadDetail(movie)}>
+          <Link to={`${props.rootUrl}/{movie._id}`}> See Detail </Link>
+        </Button>
+      )
+    }
+  ];
   return (
     <Table
       columns={columns}

@@ -16,7 +16,7 @@ const navigationItems = () => (
   <StyledHeader>
     <Menu theme="dark" mode="horizontal" style={{ lineHeight: "64px" }}>
       <Menu.Item key="home">
-        <span>AngLee Dashboard</span>
+        <span>Ang Lee Dashboard</span>
         <NavLink to="/" exact />
       </Menu.Item>
       <MenuItem key="dashboard">

@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import DashBoardLayout from "../../../../components/Dashboard/DashboardLayout";
 import { Layout, Breadcrumb } from "antd";
-import IMDbTableComtainer from "./IMDbTable/IMDbTable";
+import IMDbTableContainer from "./Table/IMDbTable";
 const { Content } = Layout;
 
 class Dashboard extends Component {
   state = {
     collapsed: true,
-    selectedKeys: ["statistics"],
+    selectedKeys: ["statistics"]
   };
 
   updateMenuKey = newKey => {
@@ -37,8 +37,9 @@ class Dashboard extends Component {
         <Route path={rootUrl} exact render={() => defaultContent} />
         <Route
           path={`${rootUrl}/reviews/imdb`}
-          exact
-          render={() => <IMDbTableComtainer/>}
+          render={() => (
+            <IMDbTableContainer rootUrl={`${rootUrl}/reviews/imdb`}/>
+          )}
         />
       </div>
     );

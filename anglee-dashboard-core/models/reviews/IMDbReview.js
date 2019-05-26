@@ -21,6 +21,14 @@ const IMDbReview = new Schema({
   body: {
     type: String,
     require: true
+  },
+  user: {
+    type: String,
+    required: true
+  },
+  spoiler: {
+    type: Boolean,
+    required: true
   }
 });
 
