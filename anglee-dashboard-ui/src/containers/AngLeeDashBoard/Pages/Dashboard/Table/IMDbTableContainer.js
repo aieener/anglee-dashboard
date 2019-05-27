@@ -41,10 +41,12 @@ export default class IMDbTableContainer extends Component {
       />
     );
 
+    let movieName = null;
     if (this.state.currentReview) {
       const review = this.state.currentReview;
       inReviewBreadCrumb = <Breadcrumb.Item>{review.title}</Breadcrumb.Item>;
-      body = <ReviewDescription review={review}/>;
+      movieName = review.movieName;
+      body = <ReviewDescription review={review} />;
     }
 
     const breadCrumb = (
@@ -55,7 +57,7 @@ export default class IMDbTableContainer extends Component {
             this.setState({ currentReview: null });
           }}
         >
-          <Link to={this.props.rootUrl}>IMDb</Link>
+          <Link to={`/dashboard/imdbReview/${movieName}`}>IMDb</Link>
         </Breadcrumb.Item>
         {inReviewBreadCrumb}
       </Breadcrumb>

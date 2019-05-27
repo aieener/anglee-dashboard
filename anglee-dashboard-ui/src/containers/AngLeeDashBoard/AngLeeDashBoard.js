@@ -18,7 +18,7 @@ class AngLeeDashBoard extends Component {
           <Route
             path="/dashboard"
             exact
-            component={DashboardPage}
+            render={() =><DashboardPage></DashboardPage>}
           />
         </Switch>
       </Layout>

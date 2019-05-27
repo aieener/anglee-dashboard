@@ -99,7 +99,6 @@ class AdminPage extends Component {
   };
 
   componentDidMount() {
-
     this.getMovies();
   }
 
@@ -107,6 +106,7 @@ class AdminPage extends Component {
     const rootUrl = "/admin";
     const movieCards = (
       <MovieCards
+        isAdmin={true}
         movies={this.state.movies}
         deleteMovie={this.deleteMovie}
         crawlTheInternet={this.crawlTheInternet}
@@ -114,7 +114,7 @@ class AdminPage extends Component {
     );
 
     const content = (
-      <Content style={{ margin: "16px 16px"}}>
+      <Content style={{ margin: "16px 16px" }}>
         <Route path={rootUrl} exact render={() => movieCards} />
         <Route
           path={`${rootUrl}/add`}

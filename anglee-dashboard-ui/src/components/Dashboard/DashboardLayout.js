@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Layout, Menu, Icon} from "antd";
+import { Layout, Menu, Icon } from "antd";
 const { Footer, Sider } = Layout;
 const { SubMenu } = Menu;
 
@@ -39,7 +39,7 @@ const DashboardLayout = props => {
                 props.updateMenuKey(["imdb"]);
               }}
             >
-              <span>IMDb</span> <Link to={`${props.rootUrl}/reviews/imdb`} />
+              <span>IMDb</span> <Link to={`${props.rootUrl}/imdbReview`} />
             </Menu.Item>
             <Menu.Item key="rotten"> Rotten Tomatoes </Menu.Item>
             <Menu.Item key="metacritic"> Metacritic </Menu.Item>

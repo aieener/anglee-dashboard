@@ -12,10 +12,11 @@ const MovieCards = props => {
         renderItem={movie => (
           <List.Item>
             <MovieCard
-              isAdmin={true}
+              isAdmin={props.isAdmin}
               movie={movie}
               deleteMovie={props.deleteMovie}
               crawlTheInternet={props.crawlTheInternet}
+              cardOnClick={props.handleCardOnClick}
             />
           </List.Item>
         )}

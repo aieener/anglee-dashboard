@@ -32,9 +32,9 @@ const IMDbTableView = props => {
       title: "Content",
       key: "content",
       witdh: "10%",
-      render: movie => (
-        <Button type="primary" onClick={() => props.handleReadDetail(movie)}>
-          <Link to={`${props.rootUrl}/{movie._id}`}> See Detail </Link>
+      render: review => (
+        <Button type="primary" onClick={() => props.handleReadDetail(review)}>
+          <Link to={`${review.movieName}/{movie._id}`}> See Detail </Link>
         </Button>
       )
     }

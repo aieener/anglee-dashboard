@@ -12,6 +12,14 @@ const CoverImg = styled.div`
 const MovieCard = props => {
   const handleDelete = () => props.deleteMovie(props.movie);
   const handleCrawl = () => props.crawlTheInternet(props.movie);
+  const handleCardOnClick = () => {
+    if (props.cardOnClick) {
+      props.cardOnClick(props.movie);
+    } else {
+      console.log('not clickable');
+    }
+  };
+
   const dateStr = props.movie.releaseDate.split("T")[0];
 
   let actions = {};
@@ -32,7 +40,7 @@ const MovieCard = props => {
   return (
     <Card
       hoverable
-      // style={{ width: 300 }}
+      onClick={handleCardOnClick}
       cover={<CoverImg url={props.movie.imageUrl} />}
       actions={actions}
       loading={props.loading}

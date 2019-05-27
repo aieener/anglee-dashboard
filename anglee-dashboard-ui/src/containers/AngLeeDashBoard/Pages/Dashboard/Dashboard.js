@@ -2,13 +2,14 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import DashBoardLayout from "../../../../components/Dashboard/DashboardLayout";
 import { Layout, Breadcrumb } from "antd";
-import IMDbTableContainer from "./Table/IMDbTable";
+import MovieReviewContainer from "./MovieReviewContainer";
+import IMDbTableContainer from "./Table/IMDbTableContainer";
 const { Content } = Layout;
 
 class Dashboard extends Component {
   state = {
     collapsed: true,
-    selectedKeys: ["statistics"]
+    selectedKeys: ["statistics"],
   };
 
   updateMenuKey = newKey => {
@@ -33,15 +34,24 @@ class Dashboard extends Component {
 
     const rootUrl = "/dashboard";
     const content = (
-      <div>
+      <Content style={{ margin: "16px 16px" }}>
         <Route path={rootUrl} exact render={() => defaultContent} />
         <Route
-          path={`${rootUrl}/reviews/imdb`}
-          render={() => (
-            <IMDbTableContainer rootUrl={`${rootUrl}/reviews/imdb`}/>
+          path={`/dashboard/imdbReview`}
+          exact
+          render={(routeProps) => (
+            <MovieReviewContainer
+              handleCardOnClick={this.handleCardOnClick}
+              selectedMovie={this.state.selectedMovie}
+              {...routeProps}
+            />
           )}
         />
-      </div>
+        <Route
+          path={`/dashboard/imdbReview/:movieName`}
+          component = {IMDbTableContainer}
+        />
+      </Content>
     );
 
     return (
