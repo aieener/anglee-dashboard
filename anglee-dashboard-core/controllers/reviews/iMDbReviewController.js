@@ -1,4 +1,4 @@
-const IMDbReview = require("../../models/reviews/IMDbReview");
+const IMDbReview = require("../../models/reviews/imdbReviews");
 
 exports.getReviews = (req, res, next) => {
   IMDbReview.find()
