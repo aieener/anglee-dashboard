@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Redirect } from "react-router";
 import MovieCards from "../../../../components/Admin/MovieCards/MovieCards";
 import axios from "../../../../axios/axios-core";
-import { Layout } from "antd";
 
 export default class MovieCardContainer extends Component {
   state = {

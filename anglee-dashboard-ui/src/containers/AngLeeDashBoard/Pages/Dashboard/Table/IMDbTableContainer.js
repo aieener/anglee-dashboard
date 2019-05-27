@@ -19,7 +19,8 @@ export default class IMDbTableContainer extends Component {
   }
 
   getIMDbReviews = () => {
-    return axios.get("/reviews/imdb").then(res => {
+    const movieName = this.props.match.params.movieName;
+    return axios.get(`/reviews/imdb/${movieName}`).then(res => {
       const reviews = res.data.reviews;
       this.setState({ reviews: reviews, loading: false });
     });
@@ -41,23 +42,28 @@ export default class IMDbTableContainer extends Component {
       />
     );
 
-    let movieName = null;
+    const movieName = this.props.match.params.movieName;
     if (this.state.currentReview) {
       const review = this.state.currentReview;
       inReviewBreadCrumb = <Breadcrumb.Item>{review.title}</Breadcrumb.Item>;
-      movieName = review.movieName;
       body = <ReviewDescription review={review} />;
     }
 
     const breadCrumb = (
       <Breadcrumb style={{ margin: "16px 0" }}>
-        <Breadcrumb.Item>Review</Breadcrumb.Item>
         <Breadcrumb.Item
           onClick={() => {
             this.setState({ currentReview: null });
           }}
         >
-          <Link to={`/dashboard/imdbReview/${movieName}`}>IMDb</Link>
+          <Link to={`/dashboard/imdbReview`}>Review Board</Link>
+        </Breadcrumb.Item>
+        <Breadcrumb.Item
+          onClick={() => {
+            this.setState({ currentReview: null });
+          }}
+        >
+          <Link to={`/dashboard/imdbReview/${movieName}`}>{`IMDb ${movieName}`}</Link>
         </Breadcrumb.Item>
         {inReviewBreadCrumb}
       </Breadcrumb>
