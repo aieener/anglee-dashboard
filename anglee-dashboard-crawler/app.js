@@ -1,9 +1,9 @@
-const IMDbCrawlerService = require("./IMDbCrawlerService");
+const IMDbCrawlerService = require("./services/IMDbCrawlerService");
 iMDbCrawlerService = new IMDbCrawlerService();
-const lifeOfPi = {
-  title : 'lifeOfPi',
-  reviewIds: {
-    iMDbId: 'tt0454876'
+const target =   {
+  "title": "Brokeback Mountain",
+  "reviewIds": {
+    "iMDbId": "tt0388795"
   }
 }
-iMDbCrawlerService.crawl(lifeOfPi);
+iMDbCrawlerService.crawl(target);

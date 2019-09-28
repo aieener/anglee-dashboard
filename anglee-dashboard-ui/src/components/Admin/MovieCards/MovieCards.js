@@ -1,6 +1,6 @@
 import React from "react";
 import MovieCard from "./MovieCard/MovieCard";
-import { List, Spin } from "antd";
+import { List } from "antd";
 
 const MovieCards = props => {
   let movieCards = <div className={"loader"} />;

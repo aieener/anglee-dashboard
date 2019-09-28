@@ -56,7 +56,7 @@ export default class IMDbTableContainer extends Component {
             this.setState({ currentReview: null });
           }}
         >
-          <Link to={`/dashboard/imdbReview`}>Review Board</Link>
+          <Link to={`/dashboard/imdbReview`}>IMDb Reviews</Link>
         </Breadcrumb.Item>
         <Breadcrumb.Item
           onClick={() => {

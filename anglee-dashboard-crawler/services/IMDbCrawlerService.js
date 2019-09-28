@@ -14,7 +14,8 @@ module.exports = class IMDbCrawlerService {
     let numOfPage = await page.evaluate(sNum => {
       return document.querySelector(sNum).innerText;
     }, this.NUM_REVIEW_SELECTOR);
-    numOfPage = parseInt(numOfPage.replace(" Reviews", ""));
+    numOfPage = numOfPage.replace(" Reviews", "").replace(",", "");
+    numOfPage = parseInt(numOfPage);
     return Math.floor(numOfPage / 25);
   }
 
