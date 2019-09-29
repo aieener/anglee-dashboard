@@ -16,7 +16,7 @@ const MovieCard = props => {
     if (props.cardOnClick) {
       props.cardOnClick(props.movie);
     } else {
-      console.log('not clickable');
+      console.log("not clickable");
     }
   };
 

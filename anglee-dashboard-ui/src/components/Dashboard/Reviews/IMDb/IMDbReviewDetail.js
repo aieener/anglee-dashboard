@@ -10,19 +10,19 @@ const wordParser = raw => {
   });
 };
 
-const ReviewDescription = props => {
+const IMDbReviewDetail = props => {
   const review = props.review;
   return (
     <div>
-      <Descriptions bordered title={review.movieName} column={4} >
+      <Descriptions bordered title={review.movieName} column={4}>
         <DescriptionsItem label="Title">{review.title}</DescriptionsItem>
         <DescriptionsItem label="Date">{review.date}</DescriptionsItem>
         <DescriptionsItem label="Score">{review.score}</DescriptionsItem>
       </Descriptions>
       <Divider orientation="left">Review Detail</Divider>
-      <Card style={{ width: '100%' }}>{wordParser(review.body)}</Card>
+      <Card style={{ width: "100%" }}>{wordParser(review.body)}</Card>
     </div>
   );
 };
 
-export default ReviewDescription;
+export default IMDbReviewDetail;

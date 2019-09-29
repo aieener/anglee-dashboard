@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "../../../../axios/axios-core";
 import axiosCrawler from "../../../../axios/axios-crawler";
 import MovieCards from "../../../../components/Admin/MovieCards/MovieCards";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 import AdminLayout from "../../../../components/Admin/AdminLayout";
 import MovieEditForm from "../../../../components/Admin/MovieForm/MovieEditForm";
 
@@ -57,7 +57,6 @@ class AdminPage extends Component {
   getMovies = () => {
     return axios.get("/movies").then(res => {
       const moviesBack = res.data.movies;
-      console.log(moviesBack);
       this.setState({ movies: moviesBack });
     });
   };
@@ -124,16 +123,14 @@ class AdminPage extends Component {
       </Content>
     );
     return (
-      <Router>
-        <AdminLayout
-          collapsed={this.state.collapsed}
-          content={content}
-          rootUrl={rootUrl}
-          onCollapse={this.onCollapse}
-          selectedKeys={this.state.selectedKeys}
-          updateMenuKey={this.updateMenuKey}
-        />
-      </Router>
+      <AdminLayout
+        collapsed={this.state.collapsed}
+        content={content}
+        rootUrl={rootUrl}
+        onCollapse={this.onCollapse}
+        selectedKeys={this.state.selectedKeys}
+        updateMenuKey={this.updateMenuKey}
+      />
     );
   }
 }

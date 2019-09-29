@@ -5,6 +5,7 @@ import { Layout, Menu, Icon } from "antd";
 const { Sider, Footer } = Layout;
 const AdminLayout = props => {
   return (
+    // <Router>
     <Layout style={{ minHeight: "100vh" }}>
       <Sider
         collapsible
@@ -41,6 +42,7 @@ const AdminLayout = props => {
         </Footer>
       </Layout>
     </Layout>
+    // </Router>
   );
 };
 

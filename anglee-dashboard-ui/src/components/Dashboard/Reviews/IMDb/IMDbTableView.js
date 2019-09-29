@@ -35,7 +35,7 @@ const IMDbTableView = props => {
       width: "10%",
       render: spoiler => {
         if (spoiler) {
-          return <Tag color={'volcano'}>Spolier</Tag>;
+          return <Tag color={"volcano"}>Spolier</Tag>;
         }
       }
     },

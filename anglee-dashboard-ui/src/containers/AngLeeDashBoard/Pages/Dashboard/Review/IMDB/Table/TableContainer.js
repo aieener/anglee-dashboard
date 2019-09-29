@@ -1,29 +1,14 @@
 import React, { Component } from "react";
-import axios from "../../../../../axios/axios-core";
-import IMDbTableView from "../../../../../components/Dashboard/Reviews/IMDb/IMDbTableView";
+import IMDbTableView from "../../../../../../../components/Dashboard/Reviews/IMDb/IMDbTableView";
 import { Link } from "react-router-dom";
 import { Layout, Breadcrumb } from "antd";
-import ReviewDescription from "./ReviewDescription";
+import ReviewDescription from "../../../../../../../components/Dashboard/Reviews/IMDb/IMDbReviewDetail";
 const { Content } = Layout;
 
-export default class IMDbTableContainer extends Component {
+export default class TableContainer extends Component {
   state = {
     pagination: {},
-    reviews: [],
-    loading: true,
     currentReview: null
-  };
-
-  componentDidMount() {
-    this.getIMDbReviews();
-  }
-
-  getIMDbReviews = () => {
-    const movieName = this.props.match.params.movieName;
-    return axios.get(`/reviews/imdb/${movieName}`).then(res => {
-      const reviews = res.data.reviews;
-      this.setState({ reviews: reviews, loading: false });
-    });
   };
 
   handleReadDetail = review => {
@@ -31,18 +16,18 @@ export default class IMDbTableContainer extends Component {
   };
 
   render() {
+    const { movieName, reviews, loading } = this.props;
     let inReviewBreadCrumb = null;
 
     let body = (
       <IMDbTableView
-        reviews={this.state.reviews}
-        loading={this.state.loading}
+        reviews={reviews}
+        loading={loading}
         handleReadDetail={this.handleReadDetail}
         {...this.props}
       />
     );
 
-    const movieName = this.props.match.params.movieName;
     if (this.state.currentReview) {
       const review = this.state.currentReview;
       inReviewBreadCrumb = <Breadcrumb.Item>{review.title}</Breadcrumb.Item>;
@@ -50,7 +35,7 @@ export default class IMDbTableContainer extends Component {
     }
 
     const breadCrumb = (
-      <Breadcrumb style={{ margin: "16px 0" }}>
+      <Breadcrumb style={{ margin: "16px 0 " }}>
         <Breadcrumb.Item
           onClick={() => {
             this.setState({ currentReview: null });
@@ -63,19 +48,21 @@ export default class IMDbTableContainer extends Component {
             this.setState({ currentReview: null });
           }}
         >
-          <Link to={`/dashboard/imdbReview/${movieName}`}>{`IMDb ${movieName}`}</Link>
+          <Link
+            to={`/dashboard/imdbReview/${movieName}`}
+          >{`${movieName}`}</Link>
         </Breadcrumb.Item>
         {inReviewBreadCrumb}
       </Breadcrumb>
     );
 
     return (
-      <Content style={{ margin: "0 16px" }}>
+      <div>
         {breadCrumb}
         <div style={{ padding: 24, background: "#fff", minHeight: 360 }}>
           {body}
         </div>
-      </Content>
+      </div>
     );
   }
 }
