@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router";
-import MovieCards from "../../../../../../components/Admin/MovieCards/MovieCards";
-import axios from "../../../../../../axios/axios-core";
+import MovieCards from "components/Admin/MovieCards/MovieCards";
+import axios from "@/axios/axios-core";
 import { Breadcrumb } from "antd";
 
 export default class MovieCardsContainer extends Component {
@@ -31,11 +31,15 @@ export default class MovieCardsContainer extends Component {
       );
     }
 
+    const breadCrumb = (
+      <Breadcrumb style={{ margin: "16px 0" }}>
+        <Breadcrumb.Item>IMDb Reviews</Breadcrumb.Item>
+      </Breadcrumb>
+    );
+
     return (
       <div style={{ margin: " 16px 0" }}>
-        <Breadcrumb style={{ margin: "16px 0" }}>
-          <Breadcrumb.Item>IMDb Reviews</Breadcrumb.Item>
-        </Breadcrumb>
+        {breadCrumb}
         <MovieCards
           isAdmin={false}
           movies={this.state.movies}

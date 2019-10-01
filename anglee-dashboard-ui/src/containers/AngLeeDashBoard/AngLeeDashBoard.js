@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { HashRouter, Route } from "react-router-dom";
-import NavigationItems from "../../components/Navigation/NavigationItems/NavigationItems";
+import NavigationItems from "components/Navigation/NavigationItems/NavigationItems";
 import HomePage from "./Pages/HomePage/HomePage";
 import AdminPage from "./Pages/Admin/Admin";
 import DashboardPage from "./Pages/Dashboard/Dashboard";

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
-import DashBoardLayout from "../../../../components/Dashboard/DashboardLayout";
+import DashboardLayout from "components/Dashboard/DashboardLayout";
 import { Layout, Breadcrumb } from "antd";
 import MovieCardsContainer from "./Review/IMDB/MovieCardsContainer";
 import MovieReviewContainer from "./Review/IMDB/MovieReviewContainer";
@@ -55,7 +55,7 @@ class Dashboard extends Component {
     );
 
     return (
-      <DashBoardLayout
+      <DashboardLayout
         collapsed={this.state.collapsed}
         onCollapse={this.onCollapse}
         content={content}

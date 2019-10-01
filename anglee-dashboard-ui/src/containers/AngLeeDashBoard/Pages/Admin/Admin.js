@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import axios from "../../../../axios/axios-core";
-import axiosCrawler from "../../../../axios/axios-crawler";
-import MovieCards from "../../../../components/Admin/MovieCards/MovieCards";
+import axios from "@/axios/axios-core";
+import axiosCrawler from "@/axios/axios-crawler";
+import MovieCards from "components/Admin/MovieCards/MovieCards";
 import { Route } from "react-router-dom";
-import AdminLayout from "../../../../components/Admin/AdminLayout";
-import MovieEditForm from "../../../../components/Admin/MovieForm/MovieEditForm";
+import AdminLayout from "components/Admin/AdminLayout";
+import MovieEditForm from "components/Admin/MovieForm/MovieEditForm";
 
 import { Layout } from "antd";
 const { Content } = Layout;
