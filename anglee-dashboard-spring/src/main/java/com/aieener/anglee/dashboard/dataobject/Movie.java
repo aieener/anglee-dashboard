@@ -9,9 +9,9 @@ import java.util.Date;
 @Entity
 @Data
 public class Movie {
-  @Id
-  private String title;
-  private Date releaseDate;
-  private String imageUrl;
-  private String imdbReviewId;
+    @Id
+    private String title;
+    private Date releaseDate;
+    private String imageUrl;
+    private String imdbReviewId;
 }

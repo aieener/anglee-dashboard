@@ -13,15 +13,15 @@ import java.util.List;
 @RestController
 @RequestMapping("/movie")
 public class MovieController {
-  private MovieService movieService;
+    private MovieService movieService;
 
-  @Autowired
-  public MovieController(MovieService movieService) {
-    this.movieService = movieService;
-  }
+    @Autowired
+    public MovieController(MovieService movieService) {
+        this.movieService = movieService;
+    }
 
-  @GetMapping("/movies")
-  public ResultVO<List<MovieVO>> movies() {
-    return null;
-  }
+    @GetMapping("/movies")
+    public ResultVO<List<MovieVO>> movies() {
+        return null;
+    }
 }

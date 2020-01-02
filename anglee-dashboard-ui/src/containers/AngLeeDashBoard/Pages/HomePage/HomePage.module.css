@@ -1,65 +1,65 @@
 .HomePage {
-	display: flex;
-	margin: 0px;
-	padding: 0px;
-	box-sizing: border-box;
-	position: relative;
-	justify-content: center;
-	flex-direction: column;
-	text-align: center;
-	min-height: 100vh;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    min-height: 100vh;
 }
 
 .HomePage .BackgroundImage {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-size: cover;
-	z-index: -1;
-	background-color: #80a3db;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+    background-color: #80a3db;
 }
 
 .HomePage h1 {
-	font: bold 60px "Open Sans", sans-serif;
-	margin-bottom: 15px;
-	opacity: 0.8;
-	color: #fff;
+    font: bold 60px "Open Sans", sans-serif;
+    margin-bottom: 15px;
+    opacity: 0.8;
+    color: #fff;
 }
 
 .HomePage h3 {
-	font: normal 28px "Open Sans", sans-serif;
-	margin-bottom: 40px;
-	color: #fff;
-	opacity: 0.8;
+    font: normal 28px "Open Sans", sans-serif;
+    margin-bottom: 40px;
+    color: #fff;
+    opacity: 0.8;
 }
 
 .HeroContentArea {
-	opacity: 0;
-	margin-top: 100px;
-	animation: slidefade 1s 1s forwards;
+    opacity: 0;
+    margin-top: 100px;
+    animation: slidefade 1s 1s forwards;
 }
 
 @keyframes slidefade {
-	100% {
-		opacity: 1;
-		margin: 0;
-	}
+    100% {
+        opacity: 1;
+        margin: 0;
+    }
 }
 
 @media (max-width: 800px) {
-	.HomePage {
-		min-height: 600px;
-	}
+    .HomePage {
+        min-height: 600px;
+    }
 
-	.HomePage h1 {
-		padding: 5%;
-		font-size: 48px;
-	}
+    .HomePage h1 {
+        padding: 5%;
+        font-size: 48px;
+    }
 
-	.HomePage h3 {
-		padding: 5%;
-		font-size: 24px;
-	}
+    .HomePage h3 {
+        padding: 5%;
+        font-size: 24px;
+    }
 }
