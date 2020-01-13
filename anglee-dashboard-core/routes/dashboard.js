@@ -6,7 +6,7 @@ const iMdbReviewController = require('../controllers/reviews/iMDbReviewControlle
 
 // test route
 router.get("/test", (req, res) => {
-  res.send({ express: "Express backend is connected to REACT" });
+    res.send({express: "Express backend is connected to REACT"});
 });
 
 router.get('/movies', movieController.getMovies);

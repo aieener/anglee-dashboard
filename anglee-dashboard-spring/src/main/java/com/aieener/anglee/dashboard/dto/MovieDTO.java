@@ -8,8 +8,8 @@ import java.util.Map;
 
 @Data
 public class MovieDTO {
-  private String title;
-  private Date releaseDate;
-  private String imageUrl;
-  private Map<ReviewSourceEnum, String> reviewIdLkup;
+    private String title;
+    private Date releaseDate;
+    private String imageUrl;
+    private Map<ReviewSourceEnum, String> reviewIdLkup;
 }
