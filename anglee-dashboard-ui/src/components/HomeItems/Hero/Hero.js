@@ -1,8 +1,8 @@
 import React from "react";
 import { Carousel } from "antd";
-import lifeOfPiImage from "assets/img/lifeOfPi-min.jpg";
-import billyLynnImage from "assets/img/moviePoster/billylynn.jpg";
-import tigerImage from "assets/img/moviePoster/life_of_pi.jpg";
+import lifeOfPiImage from "../../../assets/img/lifeOfPi-min.jpg";
+import billyLynnImage from "../../../assets/img/moviePoster/billylynn.jpg";
+import tigerImage from "../../../assets/img/moviePoster/life_of_pi.jpg";
 import styled from "styled-components";
 
 const CoverImg = styled.div`
@@ -32,15 +32,15 @@ const HeroContentArea = styled.div`
 const HeroH1 = styled.h1`
   font: bold 60px "Open Sans", sans-serif;
   margin-bottom: 15px;
-  opacity: 0.9;
-  color: #fff;
+	opacity: 0.9;
+	color: #fff;
 `;
 
 const HeroH3 = styled.h3`
   font: normal 28px "Open Sans", sans-serif;
   margin-bottom: 40px;
-  opacity: 0.9;
-  color: #fff;
+	opacity: 0.9;
+	color: #fff;
 `;
 
 const HeroText = (
