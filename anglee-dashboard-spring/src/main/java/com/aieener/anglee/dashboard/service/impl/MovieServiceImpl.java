@@ -10,31 +10,30 @@ import java.util.List;
 
 @Service
 public class MovieServiceImpl implements MovieService {
-    private MovieRepository movieRepository;
+  private MovieRepository movieRepository;
 
-    @Autowired
-    public MovieServiceImpl(MovieRepository movieRepository) {
-        this.movieRepository = movieRepository;
-    }
+  @Autowired
+  public MovieServiceImpl(MovieRepository movieRepository) {
+    this.movieRepository = movieRepository;
+  }
+  @Override
+  public Movie insert(Movie movie) {
+    movieRepository.save(movie);
+    return movie;
+  }
 
-    @Override
-    public Movie insert(Movie movie) {
-        movieRepository.save(movie);
-        return movie;
-    }
+  @Override
+  public Movie get(String title) {
+    return movieRepository.findByTitle(title);
+  }
 
-    @Override
-    public Movie get(String title) {
-        return movieRepository.findByTitle(title);
-    }
+  @Override
+  public List<Movie> getAll() {
+    return movieRepository.findAll();
+  }
 
-    @Override
-    public List<Movie> getAll() {
-        return movieRepository.findAll();
-    }
-
-    @Override
-    public Movie delete(String title) {
-        return movieRepository.deleteByTitle(title);
-    }
+  @Override
+  public Movie delete(String title) {
+    return movieRepository.deleteByTitle(title);
+  }
 }

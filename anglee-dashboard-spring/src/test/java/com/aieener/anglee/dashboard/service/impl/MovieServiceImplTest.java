@@ -17,34 +17,33 @@ import static org.junit.Assert.*;
 @SpringBootTest
 @Slf4j
 public class MovieServiceImplTest {
-    @Autowired
-    private MovieServiceImpl movieService;
+  @Autowired
+  private MovieServiceImpl movieService;
+  @Test
+  public void insert() {
+    Movie m1 = new Movie();
+    m1.setImageUrl("3131");
+    m1.setTitle("Test");
+    m1.setImdbReviewId("imdbId");
+    m1.setReleaseDate(new Date());
 
-    @Test
-    public void insert() {
-        Movie m1 = new Movie();
-        m1.setImageUrl("3131");
-        m1.setTitle("Test");
-        m1.setImdbReviewId("imdbId");
-        m1.setReleaseDate(new Date());
+    Movie mIn = movieService.insert(m1);
+    log.info("insertMovie inserter result={}", mIn);
 
-        Movie mIn = movieService.insert(m1);
-        log.info("insertMovie inserter result={}", mIn);
+    Movie mBack = movieService.get("Test");
+    log.info("insertMovie getter result={}", mBack);
 
-        Movie mBack = movieService.get("Test");
-        log.info("insertMovie getter result={}", mBack);
+  }
 
-    }
+  @Test
+  public void get() {
+  }
 
-    @Test
-    public void get() {
-    }
+  @Test
+  public void getAll() {
+  }
 
-    @Test
-    public void getAll() {
-    }
-
-    @Test
-    public void delete() {
-    }
+  @Test
+  public void delete() {
+  }
 }

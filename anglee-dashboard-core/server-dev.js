@@ -6,16 +6,16 @@ const mongoose = require("mongoose");
 const dashboardRoutes = require("./routes/dashboard");
 const app = express();
 
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(dashboardRoutes);
 
 mongoose
-    .connect("mongodb_connection_url")
-    .then(() => {
-        app.listen(port);
-    })
-    .catch(err => {
-        console.log(err);
-    });
+  .connect("mongodb_connection_url")
+  .then(() => {
+    app.listen(port);
+  })
+  .catch(err => {
+    console.log(err);
+  });

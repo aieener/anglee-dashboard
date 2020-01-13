@@ -1,5 +1,5 @@
 import React from "react";
-import {Carousel} from "antd";
+import { Carousel } from "antd";
 import lifeOfPiImage from "assets/img/lifeOfPi-min.jpg";
 import billyLynnImage from "assets/img/moviePoster/billylynn.jpg";
 import tigerImage from "assets/img/moviePoster/life_of_pi.jpg";
@@ -44,57 +44,29 @@ const HeroH3 = styled.h3`
 `;
 
 const HeroText = (
-    < HeroContentArea >
-    < HeroH1 > Welcome
-to
-Ang
-Lee
-Dashboard < /HeroH1>
-< HeroH3 > For
-our
-lovely
-Ang
-Lee
-movie
-fans < /HeroH3>
-< /HeroContentArea>
-)
-;
+  <HeroContentArea>
+    <HeroH1>Welcome to Ang Lee Dashboard</HeroH1>
+    <HeroH3>For our lovely Ang Lee movie fans</HeroH3>
+  </HeroContentArea>
+);
 
 const Hero = () => {
-    return (
-        < Carousel
-    effect = "fade" >
-        < HeroDiv >
-        < CoverImg
-    url = {tigerImage}
-    />
-    {
-        HeroText
-    }
-<
-    /HeroDiv>
-    < HeroDiv >
-    < CoverImg
-    url = {billyLynnImage}
-    />
-    {
-        HeroText
-    }
-<
-    /HeroDiv>
-    < HeroDiv >
-    < CoverImg
-    url = {lifeOfPiImage}
-    />
-    {
-        HeroText
-    }
-<
-    /HeroDiv>
-    < /Carousel>
-)
-    ;
+  return (
+    <Carousel effect="fade">
+      <HeroDiv>
+        <CoverImg url={tigerImage} />
+        {HeroText}
+      </HeroDiv>
+      <HeroDiv>
+        <CoverImg url={billyLynnImage} />
+        {HeroText}
+      </HeroDiv>
+      <HeroDiv>
+        <CoverImg url={lifeOfPiImage} />
+        {HeroText}
+      </HeroDiv>
+    </Carousel>
+  );
 };
 
 export default Hero;
